@@ -42,6 +42,7 @@ iex> [0 | a]
 
 # Tuples
 > Tuples, on the other hand, are stored contiguously in memory. This means getting the tuple size or accessing an element by index is fast. However, updating or adding elements to tuples is expensive because it requires copying the whole tuple in memory.
+
 ```elixir
 # Tuples store elements contiguously in memory. 
 # This means accessing a tuple element by index or getting the tuple size is a fast operation. 
