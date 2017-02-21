@@ -23,6 +23,8 @@ true
 ```
 
 # Lists
+> "...This means accessing the length of a list is a linear operation: we need to traverse the whole list in order to figure out its size. Updating a list is fast as long as we are prepending elements"
+
 ```elixir
 iex>a = [1, 2, 3]
 iex>b = [4, 5, 6]
@@ -41,7 +43,7 @@ iex> [0 | a]
 ```
 
 # Tuples
-> Tuples, on the other hand, are stored contiguously in memory. This means getting the tuple size or accessing an element by index is fast. However, updating or adding elements to tuples is expensive because it requires copying the whole tuple in memory.
+> "...Tuples, on the other hand, are stored contiguously in memory. This means getting the tuple size or accessing an element by index is fast. However, updating or adding elements to tuples is expensive because it requires copying the whole tuple in memory."
 
 ```elixir
 # Tuples store elements contiguously in memory. 
