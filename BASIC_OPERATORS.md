@@ -22,11 +22,9 @@ true
 
 #### Other comparison Operators ( || && ! )
 > For these operators, all values except false and nil will evaluate to true
+
 ```elixir
 || && ! # Will accept argument of any type
 ```
-
-#### 
-```elixir
-
-```
+> "As a rule of thumb, use and, or and not when you are expecting booleans. If any of the arguments are non-boolean, use &&, || and !.
+"Elixir also provides ==, !=, ===, !==, <=, >=, <, and > as comparison operators"
