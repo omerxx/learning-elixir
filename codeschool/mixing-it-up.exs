@@ -17,4 +17,16 @@ IO.puts "#{head} and #{tail}"
 [head | _ ] = languages
 IO.puts head
 
+# In order to iterate over a list is with recusion
+defmodule Recursion do
+	def print_list [head | tail] do
+		IO.puts head
+		print_list(tail)
+	end
+
+	def print_list [] do
+	end
+end
+
+Recursion.print_list [1, 2, 3, 4, 5]
     
