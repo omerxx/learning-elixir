@@ -29,4 +29,29 @@ defmodule Recursion do
 end
 
 Recursion.print_list [1, 2, 3, 4, 5]
+
+# Shortening multiple function can also be done using options which is a tuple of options as a second argument
+defmodule Shortend do
+	def example variable, options do
+		currency = options[:currency]
+		symbol = options[:symbol]
+		"There you go: #{variable} #{currency} #{symbol}"
+	end
+
+	# Can also set a default value for the options parameter
+	def example2 variable, options \\ [] do
+		currency = options[:currency] || "default coin"
+		symbol = options[:symbol] || "@"
+		"There you go: #{variable} #{currency} #{symbol}"
+	end
+end
+
+IO.puts Shortend.example "variable", currency: "dollar", symbol: "$"
+IO.puts Shortend.example2 "variable"
+
+# Using Ecto to build SQL statements from elixir code
+Repo.all( from u in User,
+	where: u.age > 20,
+	where: i.is_active == true
+)
     
